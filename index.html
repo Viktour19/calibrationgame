@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calibration Game</title>
+  <link href="./main_o.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .modal {
+      display: none; /* Change to 'none' / block to hide the modal */
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+  </style>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2">
+    <div class="mb-4">
+      <!-- Logo placeholder -->
+      <div class="bg-gray-300 h-12 w-24 mb-3 mx-auto"></div>
+      <h1 class="text-lg font-bold">The Calibration Game</h1>
+      <p class="text-sm">Calibration game is a game to get better at identifying hallucination in LLMs.</p>
+    </div>
+    <div class="flex justify-center mt-8">
+      <button class="bg-gray-200 hover:bg-gray-300 text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-2">
+        How it works
+      </button>
+      <button class="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        Play
+      </button>
+
+    </div>
+    <div class="text-xs mt-8">This is a <b>research artifact</b> and intended for research and educational purposes only.</div>
+  </div>
+</body>
+
+<div class="modal">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2 mx-auto mt-24">
+      <!-- Close button -->
+      <div class="flex justify-end">
+        <button class="text-black font-bold py-1 px-2 rounded hover:bg-gray-200">
+          X
+        </button>
+      </div>
+      <h2 class="text-lg font-bold mb-2">How to Play</h2>
+      <p class="text-sm mb-4">Rate on a scale from 0 to 1 your confidence in the correctness of the response of a LLM to a question.</p>
+      <p class="text-sm mb-4">- A rating of 0 indicates you believe the answer to be absolutely <b>incorrect</b>.<br>- A rating of 1 indicates you believe the answer to be absolutely <b>correct</b>.</p>
+      <hr class="my-4">
+      <h2 class="text-lg font-bold mb-2">Calibration Score</h2>
+      <p class="text-sm mb-4">At the end of the game, we obtain a score that indicates how far away your predictions are from a perfectly calibrated response.</p>
+      <p class="text-sm">- A perfectly calibrated response is one that correctly predicts the correctness of the LLM's answer in every single instance.<br>- Each session comprises 20 questions, and the best calibration score obtainable is 0.</p>
+      <div class="text-xs mt-8">
+        <a href="https://www.jstor.org/stable/2987588" target="_blank" style="color: maroon;">Learn more about Calibration</a>.
+    </div>
+
+    </div>
+
+  </div>
+
+</html>

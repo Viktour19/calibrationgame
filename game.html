@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidence Rating</title>
+  <link href="./main_o.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2">
+    <p class="text-sm mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
+    <div class="font-bold mb-2">Who created Rick and Morty?</div>
+    <div class="text-sm italic mb-8">LLM Answer: Rick and Morty was created by Justin Roiland and Dan Harmon for Adult Swim.</div>
+    <div class="flex justify-center items-center mb-4">
+      <div class="flex space-x-1">
+        <span class="text-sm font-bold">0</span>
+        <!-- Radio button scale -->
+        <div class="flex space-x-3">
+          <!-- Repeat this for numbers 1 through 10 -->
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.1">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.2">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.3">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.4">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.5">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.6">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.7">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.8">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.9">
+          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="1">
+        </div>
+        <span class="text-sm font-bold">1</span>
+      </div>
+    </div>
+    <button class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
+      Next
+    </button>
+    <div class="text-xs mt-4">1/20</div>
+  </div>
+</body>
+</html>

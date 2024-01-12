@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calibration Score</title>
+  <link href="./main_o.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2">
+    <!-- Logo placeholder -->
+    <div class="bg-gray-300 h-12 w-24 mb-3 mx-auto"></div>
+    <h2 class="text-lg font-bold mb-2">Your calibration score is</h2>
+    <p class="text-3xl font-bold mb-2">0.0161</p>
+    <p class="mb-4">You are mildly overconfident in the answers provided by the LLM.</p>
+    <!-- Placeholder for the chart -->
+    <div class="flex justify-center items-center h-64 mb-4 mt-8">
+        <!-- <img src="./11.png" class="w-64 h-64"> -->
+        <canvas id="myChart" class="w-64 h-64"></canvas>
+    </div>
+
+    <button class="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      I'll keep playing
+    </button>
+
+    <p class="mt-8 text-xs">Have comments or feedback? <br/> share them on HackerNews: <a style="color: maroon;" href="https://news.ycombinator.com/item?id=38958266" >https://news.ycombinator.com/item?id=38958266</a> or email vakinwan[at]cs.cmu.edu.</p>
+
+  </div>
+<script src="./plot.js"></script>
+</body>
+</html>
+
+
