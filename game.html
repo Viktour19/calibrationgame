@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confidence Rating</title>
+  <link rel="icon" href="./logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
   <link href="./main_o.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -32,10 +34,33 @@
         <span class="text-sm font-bold">1</span>
       </div>
     </div>
-    <button class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
+    <button id="nextButton" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
       Next
     </button>
     <div class="text-xs mt-4">1/20</div>
   </div>
 </body>
 </html>
+
+
+<script>
+function enableNextButton() {
+  document.getElementById('nextButton').disabled = false;
+}
+
+document.querySelectorAll('.option').forEach(function(radioButton) {
+  radioButton.addEventListener('change', enableNextButton);
+});
+
+function loadNextQuestion() {
+  // Logic to load the next question and answer goes here
+}
+
+document.getElementById('nextButton').addEventListener('click', function() {
+  loadNextQuestion();
+  this.disabled = true;
+});
+
+document.getElementById('nextButton').disabled = true;
+
+</script>
