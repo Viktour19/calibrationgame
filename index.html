@@ -33,10 +33,10 @@
       <p class="text-sm">Calibration game is a game to get better at identifying hallucination in LLMs.</p>
     </div>
     <div class="flex justify-center mt-8">
-      <button class="bg-gray-200 hover:bg-gray-300 text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-2">
+      <button id="howitworks" class="bg-gray-200 hover:bg-gray-300 text-black font-semibold py-2 px-4 border border-gray-400 rounded shadow mr-2">
         How it works
       </button>
-      <button class="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      <button onclick="location.href='./game.html';" class="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
         Play
       </button>
 
@@ -45,11 +45,11 @@
   </div>
 </body>
 
-<div class="modal">
+<div class="modal" id="myModal">
     <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2 mx-auto mt-24">
       <!-- Close button -->
       <div class="flex justify-end">
-        <button class="text-black font-bold py-1 px-2 rounded hover:bg-gray-200">
+        <button id="closemodal" class="text-black font-bold py-1 px-2 rounded hover:bg-gray-200">
           X
         </button>
       </div>
@@ -68,4 +68,28 @@
 
   </div>
 
+  
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("howitworks");
+    var closeicon = document.getElementById("closemodal");
+    function openModal() {
+        modal.style.display = "block";
+    }
+    function closeModal() {
+        modal.style.display = "none";
+    }
+    btn.onclick = function() {
+        openModal();
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+    closeicon.onclick = function(event) {
+            closeModal();
+    }
+</script>
+  
 </html>
