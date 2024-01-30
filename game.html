@@ -48,19 +48,16 @@ function enableNextButton() {
   document.getElementById('nextButton').disabled = false;
 }
 
-document.querySelectorAll('.option').forEach(function(radioButton) {
+document.querySelectorAll('.form-radio').forEach(function(radioButton) {
   radioButton.addEventListener('change', enableNextButton);
 });
 
 function loadNextQuestion() {
-  // Logic to load the next question and answer goes here
+  window.location.href = './score.html';
 }
 
 document.getElementById('nextButton').addEventListener('click', function() {
   loadNextQuestion();
-  this.disabled = true;
 });
-
-document.getElementById('nextButton').disabled = true;
 
 </script>
