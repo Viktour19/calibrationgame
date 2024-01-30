@@ -13,37 +13,37 @@
 
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="container bg-white p-6 rounded-lg shadow-lg text-center">
-        <p class="text-sm mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
+        <p class="text-base mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
         <div id="qa-container">
 
-            <div id="qa-question" class="font-bold mb-2"></div>
-            <div id="qa-answer" class="text-sm italic mb-8"></div>
+            <div id="qa-question" class="text-lg font-bold mb-2"></div>
+            <div id="qa-answer" class="text-lg italic mb-8"></div>
 
         </div>
         <div class="flex justify-center items-center mb-4">
             <div class="flex space-x-1">
-                <span class="text-sm font-bold">0</span>
+                <span class="text-base font-bold">0</span>
                 <!-- Radio button scale -->
-                <div class="flex space-x-3 overflow-x-auto no-scrollbar">
+                <div class="flex space-x-3 overflow-x-auto no-scrollbar" style="padding-left: 10px; padding-right: 10px">
                     <!-- Repeat this for numbers 1 through 10 -->
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.1">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.2">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.3">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.4">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.5">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.6">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.7">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.8">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.9">
-                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="1">
+                    <input  type="radio" name="confidence" class="form-radio h-6 w-6" value="0.1">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.2">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.3">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.4">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.5">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.6">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.7">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.8">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.9">
+                    <input type="radio" name="confidence" class="form-radio h-6 w-6" value="1">
                 </div>
-                <span class="text-sm font-bold">1</span>
+                <span class="text-base font-bold">1</span>
             </div>
         </div>
         <button id="nextButton" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
             Next
         </button>
-        <div id="pagination" class="text-xs mt-4">1/N</div>
+        <div id="pagination" class="text-xs mt-4" style="color: maroon;">1/N</div>
     </div>
 </body>
 
