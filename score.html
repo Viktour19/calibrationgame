@@ -11,11 +11,10 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-  <div class="bg-white p-6 rounded-lg shadow-lg text-center w-1/2">
-    <!-- Logo placeholder -->
-    <!-- <div class="bg-gray-300 h-12 w-24 mb-3 mx-auto"></div> -->
-    <img class="h-16 mb-3 mx-auto curved-edge" src="./logo.png"/>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-lg mx-auto">
+      <img class="h-16 mb-3 mx-auto curved-edge" src="./logo.png" alt="Logo"/>
+
 
     <h2 class="text-lg font-bold mb-2">Your calibration score is</h2>
     <p class="text-3xl font-bold mb-2">0.0161</p>
@@ -23,7 +22,7 @@
     <!-- Placeholder for the chart -->
     <div class="flex justify-center items-center h-64 mb-4 mt-8">
         <!-- <img src="./11.png" class="w-64 h-64"> -->
-        <canvas id="myChart" class="w-64 h-64"></canvas>
+        <canvas id="myChart" class="w-full max-w-xs h-auto"></canvas>
     </div>
 
     <button class="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">

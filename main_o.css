@@ -8,6 +8,8 @@
 */
 .curved-edge {
     border-radius: 3px;
+    max-width: 100%;
+    height: auto;
 }
 
 *,
@@ -69,7 +71,35 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  font-family: 'Arial', sans-serif;
 }
+
+/* Responsive scale for the container */
+.container {
+    width: 90%; /* Use a percentage-based width */
+    max-width: 500px; /* Maximum width for larger devices */
+    margin: auto; /* Center the container */
+  }
+
+  /* Use media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+      width: 95%; /* Increase width on smaller screens */
+    }
+
+    .text-sm {
+      font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .form-radio {
+      height: 4vw; /* Use viewport-based sizes for radio buttons */
+      width: 4vw;
+    }
+
+    .button {
+      padding: 10px 15px; /* Adjust button padding */
+    }
+  }
 
 /*
 1. Add the correct height in Firefox.
