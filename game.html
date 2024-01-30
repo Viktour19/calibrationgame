@@ -1,63 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confidence Rating</title>
-  <link rel="icon" href="./logo.png" type="image/x-icon">
-  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
-  <link href="./main_o.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidence Rating</title>
+    <link rel="icon" href="./logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link href="./main_o.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="container bg-white p-6 rounded-lg shadow-lg text-center">
-    <p class="text-sm mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
-    <div class="font-bold mb-2">Who created Rick and Morty?</div>
-    <div class="text-sm italic mb-8">LLM Answer: Rick and Morty was created by Justin Roiland and Dan Harmon for Adult Swim.</div>
-    <div class="flex justify-center items-center mb-4">
-      <div class="flex space-x-1">
-        <span class="text-sm font-bold">0</span>
-        <!-- Radio button scale -->
-        <div class="flex space-x-3 overflow-x-auto no-scrollbar">
-          <!-- Repeat this for numbers 1 through 10 -->
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.1">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.2">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.3">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.4">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.5">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.6">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.7">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.8">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.9">
-          <input type="radio" name="confidence" class="form-radio h-5 w-5" value="1">
+        <p class="text-sm mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
+        <div id="qa-container">
+
+            <div id="qa-question" class="font-bold mb-2"></div>
+            <div id="qa-answer" class="text-sm italic mb-8"></div>
+
         </div>
-        <span class="text-sm font-bold">1</span>
-      </div>
+        <div class="flex justify-center items-center mb-4">
+            <div class="flex space-x-1">
+                <span class="text-sm font-bold">0</span>
+                <!-- Radio button scale -->
+                <div class="flex space-x-3 overflow-x-auto no-scrollbar">
+                    <!-- Repeat this for numbers 1 through 10 -->
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.1">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.2">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.3">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.4">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.5">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.6">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.7">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.8">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="0.9">
+                    <input type="radio" name="confidence" class="form-radio h-5 w-5" value="1">
+                </div>
+                <span class="text-sm font-bold">1</span>
+            </div>
+        </div>
+        <button id="nextButton" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
+            Next
+        </button>
+        <div id="pagination" class="text-xs mt-4">1/N</div>
     </div>
-    <button id="nextButton" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded mt-8">
-      Next
-    </button>
-    <div class="text-xs mt-4">1/20</div>
-  </div>
 </body>
+
 </html>
 
 
 <script>
-function enableNextButton() {
-  document.getElementById('nextButton').disabled = false;
-}
+     function toggleNextButton() {
+        const radioButtons = document.querySelectorAll('.form-radio');
+        const isAnyChecked = Array.from(radioButtons).some(radioButton => radioButton.checked);
+        document.getElementById('nextButton').disabled = !isAnyChecked;
+    }
 
-document.querySelectorAll('.form-radio').forEach(function(radioButton) {
-  radioButton.addEventListener('change', enableNextButton);
-});
+    document.querySelectorAll('.form-radio').forEach(function (radioButton) {
+        radioButton.addEventListener('change', toggleNextButton);
+    });
 
-function loadNextQuestion() {
-  window.location.href = './score.html';
-}
+    function loadNextQuestion() {
+        globalidx = globalidx + 1;
+        if (globalidx == M) {
+            window.location.href = './score.html';
+        }
+        else {
+            document.getElementById('pagination').textContent = (globalidx + 1).toString() + '/' + M.toString();
+            idx = uniqueRandomInts[globalidx];
+            loadAndDisplayQA(idx);
+            const radioButtons = document.querySelectorAll('.form-radio');
+            radioButtons.forEach(radioButton => {
+                radioButton.checked = false;
+                document.getElementById('nextButton').disabled = true;
+            });
+        }
+    }
 
-document.getElementById('nextButton').addEventListener('click', function() {
-  loadNextQuestion();
-});
+    document.getElementById('nextButton').addEventListener('click', function () {
+        loadNextQuestion();
+    });
+
+    function generateUniqueRandomInts(N, M) {
+        const arr = Array.from({ length: N }, (_, i) => i);
+        // Shuffle using the Fisher-Yates algorithm
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+
+        return arr.slice(0, M);
+    }
+
+
+    function loadAndDisplayQA(indx) {
+        fetch('questions.json')
+            .then(response => response.json())
+            .then(data => {
+                const firstQA = data[indx];
+                const questionDiv = document.getElementById('qa-question');
+                const answerDiv = document.getElementById('qa-answer');
+                questionDiv.textContent = firstQA.question;
+                answerDiv.textContent = firstQA.answer;
+
+            })
+            .catch(error => {
+                console.error('Error fetching and parsing the JSON:', error);
+            });
+    }
+
+    let uniqueRandomInts;
+    let globalidx = 0;
+    const N = 6;
+    const M = 3;
+
+    window.onload = function () {
+        document.getElementById('nextButton').disabled = true;
+        uniqueRandomInts = generateUniqueRandomInts(N, M);
+        idx = uniqueRandomInts[globalidx];
+        loadAndDisplayQA(idx);
+        document.getElementById('pagination').textContent = '1/'+M.toString();
+    };
 
 </script>
