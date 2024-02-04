@@ -13,11 +13,11 @@
 
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="container bg-white p-6 rounded-lg shadow-lg text-center">
-        <p class="text-base mb-8">How confident are you that the LLM provides a <b>correct</b> answer to the question?</p>
+        <p class="text-base mb-8">How confident are you that the LLM provides a <b>correct</b> response to the prompt?</p>
         <div id="qa-container">
 
-            <div id="qa-question" class="text-lg font-bold mb-2"></div>
-            <div id="qa-answer" class="text-lg italic mb-8"></div>
+            <div id="qa-question" class="text-lg font-bold mb-8"></div>
+            <!-- <div id="qa-answer" class="text-lg italic mb-8"></div> -->
 
         </div>
         <div class="flex justify-center items-center mb-4">
@@ -95,14 +95,15 @@
 
 
     function loadAndDisplayQA(indx) {
-        fetch('questions.json')
+        fetch('processed_data.json')
             .then(response => response.json())
             .then(data => {
                 const firstQA = data[indx];
+                console.log(data);
                 const questionDiv = document.getElementById('qa-question');
-                const answerDiv = document.getElementById('qa-answer');
-                questionDiv.textContent = firstQA.question;
-                answerDiv.textContent = firstQA.answer;
+                // const answerDiv = document.getElementById('qa-answer');
+                questionDiv.textContent = firstQA.user_query;
+                // answerDiv.textContent = firstQA.answer;
 
             })
             .catch(error => {
@@ -112,7 +113,7 @@
 
     let uniqueRandomInts;
     let globalidx = 0;
-    const N = 6;
+    const N = 60;
     const M = 3;
 
     window.onload = function () {
