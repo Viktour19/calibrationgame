@@ -17,7 +17,7 @@
         <div id="qa-container">
 
             <div id="qa-question" class="text-lg font-bold mb-8"></div>
-            <!-- <div id="qa-answer" class="text-lg italic mb-8"></div> -->
+            <div id="qa-answer" style="display: none;" class="text-lg italic mb-8"></div>
 
         </div>
         <div class="flex justify-center items-center mb-4">
@@ -26,6 +26,7 @@
                 <!-- Radio button scale -->
                 <div class="flex space-x-3 overflow-x-auto no-scrollbar" style="padding-left: 10px; padding-right: 10px">
                     <!-- Repeat this for numbers 1 through 10 -->
+                    <input  type="radio" name="confidence" class="form-radio h-6 w-6" value="0">
                     <input  type="radio" name="confidence" class="form-radio h-6 w-6" value="0.1">
                     <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.2">
                     <input type="radio" name="confidence" class="form-radio h-6 w-6" value="0.3">
@@ -63,14 +64,23 @@
 
     function loadNextQuestion() {
         globalidx = globalidx + 1;
+        const radioButtons = document.querySelectorAll('.form-radio');
+        radioButtons.forEach(radioButton => {
+            if (radioButton.checked){
+                selected.push(parseFloat(radioButton.value));
+                correct.push(parseFloat(document.getElementById('qa-answer').textContent));
+            }
+        });
+
         if (globalidx == M) {
+            sessionStorage.setItem('selected', JSON.stringify(selected));
+            sessionStorage.setItem('correct', JSON.stringify(correct));
             window.location.href = './score.html';
         }
         else {
             document.getElementById('pagination').textContent = (globalidx + 1).toString() + '/' + M.toString();
             idx = uniqueRandomInts[globalidx];
             loadAndDisplayQA(idx);
-            const radioButtons = document.querySelectorAll('.form-radio');
             radioButtons.forEach(radioButton => {
                 radioButton.checked = false;
                 document.getElementById('nextButton').disabled = true;
@@ -99,11 +109,18 @@
             .then(response => response.json())
             .then(data => {
                 const firstQA = data[indx];
-                console.log(data);
+                // console.log(data);
                 const questionDiv = document.getElementById('qa-question');
-                // const answerDiv = document.getElementById('qa-answer');
+                const answerDiv = document.getElementById('qa-answer');
                 questionDiv.textContent = firstQA.user_query;
-                // answerDiv.textContent = firstQA.answer;
+
+                let accuracy;
+                if (firstQA.hallucination === "no") {
+                    accuracy = 1;
+                } else {
+                    accuracy = 0;
+                }
+                answerDiv.textContent = accuracy;
 
             })
             .catch(error => {
@@ -114,7 +131,10 @@
     let uniqueRandomInts;
     let globalidx = 0;
     const N = 60;
-    const M = 3;
+    const M = 20;
+    let selected = [];
+    let correct = [];
+
 
     window.onload = function () {
         document.getElementById('nextButton').disabled = true;

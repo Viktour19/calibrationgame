@@ -88,7 +88,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Create a C++ function that orders an array\nNo input",
+        "user_query": "Create a C++ function that orders an array\n",
         "hallucination": "yes"
     },
     {
@@ -212,7 +212,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Assume you are a web designer, create an HTML layout using CSS classes.\nNo input",
+        "user_query": "Assume you are a web designer, create an HTML layout using CSS classes.\n",
         "hallucination": "yes"
     },
     {
@@ -340,7 +340,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Create a programming task involving dictionaries\n<no input>",
+        "user_query": "Create a programming task involving dictionaries\n<>",
         "hallucination": "no"
     },
     {
@@ -384,7 +384,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Suggest a dish for a dinner party that's suitable for vegetarians. Output the name of the dish.\nNo input",
+        "user_query": "Suggest a dish for a dinner party that's suitable for vegetarians. Output the name of the dish.\n",
         "hallucination": "yes"
     },
     {
@@ -584,7 +584,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Compose a five-line poem that uses at least three different poetic devices.\nNo Input",
+        "user_query": "Compose a five-line poem that uses at least three different poetic devices.\n",
         "hallucination": "no"
     },
     {
@@ -1056,7 +1056,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate a story line that is capped at 100 words.\nNo input",
+        "user_query": "Generate a story line that is capped at 100 words.\n",
         "hallucination": "no"
     },
     {
@@ -4036,7 +4036,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Write the code for swapping two elements in a given array.\nNo input",
+        "user_query": "Write the code for swapping two elements in a given array.\n",
         "hallucination": "no"
     },
     {
@@ -4232,7 +4232,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "What is a snack that includes only natural ingredients?\nNo Input",
+        "user_query": "What is a snack that includes only natural ingredients?\n",
         "hallucination": "no"
     },
     {
@@ -4300,7 +4300,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Construct a paragraph that motivates someone to start exercising.\n(no input)",
+        "user_query": "Construct a paragraph that motivates someone to start exercising.\n()",
         "hallucination": "no"
     },
     {
@@ -4344,7 +4344,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Provide an example of something that could be automated with AI.\nNo input",
+        "user_query": "Provide an example of something that could be automated with AI.\n",
         "hallucination": "no"
     },
     {
@@ -4812,7 +4812,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Find the closing cost of buying a house worth $289,000\nNo input",
+        "user_query": "Find the closing cost of buying a house worth $289,000\n",
         "hallucination": "no"
     },
     {
@@ -6608,7 +6608,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Write a paragraph about an innovative technology\nNo input",
+        "user_query": "Write a paragraph about an innovative technology\n",
         "hallucination": "no"
     },
     {
@@ -6752,7 +6752,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Name two ways to activate a machine learning model.\nNo Input",
+        "user_query": "Name two ways to activate a machine learning model.\n",
         "hallucination": "no"
     },
     {
@@ -7168,7 +7168,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate an HTML code for a 3Cols table that also has a header. Output the code directly.\nNo input",
+        "user_query": "Generate an HTML code for a 3Cols table that also has a header. Output the code directly.\n",
         "hallucination": "no"
     },
     {
@@ -7956,7 +7956,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Create a list of tasks for the user to do.\nNo input.",
+        "user_query": "Create a list of tasks for the user to do.\n.",
         "hallucination": "no"
     },
     {
@@ -8040,7 +8040,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "List three things that you need to consider when designing an app.\nNo input required",
+        "user_query": "List three things that you need to consider when designing an app.\n required",
         "hallucination": "no"
     },
     {
@@ -8144,7 +8144,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Describe the climate in Denver, CO.\nNo input",
+        "user_query": "Describe the climate in Denver, CO.\n",
         "hallucination": "no"
     },
     {
@@ -8572,7 +8572,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate a list of 3 key provisions for a business contract.\nNo input required.",
+        "user_query": "Generate a list of 3 key provisions for a business contract.\n required.",
         "hallucination": "no"
     },
     {
@@ -9636,7 +9636,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Tell something about dolphins.\n<no input>",
+        "user_query": "Tell something about dolphins.\n<>",
         "hallucination": "no"
     },
     {
@@ -9660,7 +9660,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Write a poem with 4 lines using the words \"night\", \"joy\", \"sorrow\", and \"peace\".\n<no input>",
+        "user_query": "Write a poem with 4 lines using the words \"night\", \"joy\", \"sorrow\", and \"peace\".\n<>",
         "hallucination": "no"
     },
     {
@@ -10000,7 +10000,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Describe what is a validator in programming.\nNo input",
+        "user_query": "Describe what is a validator in programming.\n",
         "hallucination": "no"
     },
     {
@@ -10308,7 +10308,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Write a Python script to print the first 10 numbers between 1 and 100 that are multiples of 3.\nNo Input",
+        "user_query": "Write a Python script to print the first 10 numbers between 1 and 100 that are multiples of 3.\n",
         "hallucination": "no"
     },
     {
@@ -10476,7 +10476,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate a list of suggestions for lowering energy consumption in businesses.\nNo input",
+        "user_query": "Generate a list of suggestions for lowering energy consumption in businesses.\n",
         "hallucination": "no"
     },
     {
@@ -10912,7 +10912,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "What are the living conditions like in Antarctica? Output a 3-5 sentence response.\nNo input",
+        "user_query": "What are the living conditions like in Antarctica? Output a 3-5 sentence response.\n",
         "hallucination": "no"
     },
     {
@@ -11468,7 +11468,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Suggest a way to increase engagement.\nNo input required.",
+        "user_query": "Suggest a way to increase engagement.\n required.",
         "hallucination": "no"
     },
     {
@@ -11652,7 +11652,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "List two methods that can be used to increase customer satisfaction.\n<No Input>",
+        "user_query": "List two methods that can be used to increase customer satisfaction.\n<>",
         "hallucination": "no"
     },
     {
@@ -12192,7 +12192,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Give a suggestion on how to save money for a college student.\nNo input",
+        "user_query": "Give a suggestion on how to save money for a college student.\n",
         "hallucination": "yes"
     },
     {
@@ -12980,7 +12980,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Describe a scenario where a bot could be used to automate a process.\nNo input required",
+        "user_query": "Describe a scenario where a bot could be used to automate a process.\n required",
         "hallucination": "no"
     },
     {
@@ -13008,7 +13008,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Create an analogy between a computer and a car.\n<no input>",
+        "user_query": "Create an analogy between a computer and a car.\n<>",
         "hallucination": "no"
     },
     {
@@ -13816,7 +13816,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Provide an example of a scenario that requires a system for machine learning.\n<No Input>",
+        "user_query": "Provide an example of a scenario that requires a system for machine learning.\n<>",
         "hallucination": "no"
     },
     {
@@ -14076,7 +14076,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Suggest three ways people can save energy in their homes.\nNo input",
+        "user_query": "Suggest three ways people can save energy in their homes.\n",
         "hallucination": "yes"
     },
     {
@@ -14300,7 +14300,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "Add 3 interesting facts about Colombia.\n<No input>",
+        "user_query": "Add 3 interesting facts about Colombia.\n<>",
         "hallucination": "no"
     },
     {
@@ -15128,7 +15128,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate a email template thanking a customer for their purchase.\nNo input",
+        "user_query": "Generate a email template thanking a customer for their purchase.\n",
         "hallucination": "no"
     },
     {
@@ -15308,7 +15308,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Tell the definition of a metaphor.\nNo Input",
+        "user_query": "Tell the definition of a metaphor.\n",
         "hallucination": "no"
     },
     {
@@ -15336,7 +15336,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Provide an example of a natural resource that has been depleted from overuse by humans.\n<no input>",
+        "user_query": "Provide an example of a natural resource that has been depleted from overuse by humans.\n<>",
         "hallucination": "no"
     },
     {
@@ -15384,7 +15384,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Describe the poem \"If\" by Rudyard Kipling in your own words.\n<no input>",
+        "user_query": "Describe the poem \"If\" by Rudyard Kipling in your own words.\n<>",
         "hallucination": "no"
     },
     {
@@ -16192,7 +16192,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Name 5 elements of a romantic comedy movie.\n(No input)",
+        "user_query": "Name 5 elements of a romantic comedy movie.\n()",
         "hallucination": "no"
     },
     {
@@ -16456,7 +16456,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "What are two advantages and two disadvantages of using relational databases?\nNo input",
+        "user_query": "What are two advantages and two disadvantages of using relational databases?\n",
         "hallucination": "no"
     },
     {
@@ -16712,7 +16712,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "What type of sentences have a negative connotation?\nNo Input",
+        "user_query": "What type of sentences have a negative connotation?\n",
         "hallucination": "no"
     },
     {
@@ -16764,7 +16764,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Explain the difference between mitigating and exacerbating factors.\n<No Input>",
+        "user_query": "Explain the difference between mitigating and exacerbating factors.\n<>",
         "hallucination": "no"
     },
     {
@@ -17036,7 +17036,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Summarize the theory of evolution.\nNo input",
+        "user_query": "Summarize the theory of evolution.\n",
         "hallucination": "no"
     },
     {
@@ -17488,7 +17488,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Generate 5 metaphors for a bedroom.\n<No input>",
+        "user_query": "Generate 5 metaphors for a bedroom.\n<>",
         "hallucination": "no"
     },
     {
@@ -17536,7 +17536,7 @@
         "hallucination": "yes"
     },
     {
-        "user_query": "What is the importance of practicing self-care?\nNo Input",
+        "user_query": "What is the importance of practicing self-care?\n",
         "hallucination": "no"
     },
     {
@@ -17936,7 +17936,7 @@
         "hallucination": "no"
     },
     {
-        "user_query": "Explain why someone who wants to recycle their old books should donate them to a library.\n<no input>",
+        "user_query": "Explain why someone who wants to recycle their old books should donate them to a library.\n<>",
         "hallucination": "no"
     },
     {
